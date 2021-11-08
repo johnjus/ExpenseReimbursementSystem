@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+#headerBetter
+{
+    background-color: #70e1f5;
+    color: white;
+    font-weight: bold;
+    
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: 100%;
+
+    /* background:  linear-gradient(135deg,  var(--primary), var(--secondary)), 
+            url('/project1-frontend/background-pictures/vintage-camera.jpg') no-repeat center center / cover; */
+    background: linear-gradient(135deg, rgb(25, 115, 175) , rgb(112, 14, 14)) no-repeat;
+    /* background: no-repeat; */
+    /* linear-gradient(135deg, rgba(12, 83, 190, 0.65) , rgba(175, 49, 38, 0.65)) */
+
+    
+    
+    /* background: repeating-linear-gradient(53deg, rgb(31, 37, 97), rgb(141, 138, 158)); */
+    /* font-family: Montserrat; */
+}
+
+nav{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 2vh;
+    max-height: 5vh;
+    background-color: rgba(0, 0, 0, 0.575);
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.555);
+    color: white;
+    font-family: Montserrat;
+}
+
+.logo
+{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.navlinks
+{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+    cursor: pointer;
+}
+
+.navlinks li
+{
+    list-style: none;
+}
+
+.navlinks li:hover
+{
+    box-shadow: 0px 2px 0px rgb(255, 255, 255);
+}
+
+.navlinks a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+@media screen and (max-width: 2000px)
+{
+    .navlinks
+    {
+        width: 35%;
+    }
+}
+@media screen and (max-width: 2000px)
+{
+    .navlinks
+    {
+        width: 45%;
+    }
+}
+@media screen and (max-width: 1050px)
+{
+    .navlinks
+    {
+        width: 55%;
+    }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.ticketTable{
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 100px, 100px, 50px, 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.555);
+    transition: all 0.9s ease;
+}
+
+.searchBox{
+    /* background-image: url('/css/searchicon.png');
+    background-position: 10px 12px; */
+    margin-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.432);
+    font-family: Montserrat;
+    display: flex;
+    /* flex-direction: column; */
+    position:relative;
+    box-shadow: 0px 5px 5px 2px rgba(2, 2, 2, 0.555);
+    color: white;
+    padding: 16px;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 16px;
+    /* cursor: pointer; */
+    transition: all 0.3s ease;
+}
+
+.ticketShadow
+{
+    cursor: pointer;
+}
+
+.table-sortable th {
+    cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after {
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after {
+    content: "\25be";
+}
+
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-desc {
+  background: rgba(0, 0, 0, 0.116);
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table{
+    font-family: Montserrat;
+    border-collapse: collapse;
+    border-radius: 5px 5px 0 0;
+}
+
+
+td, th{
+    border: 1px solid #d3d1d1;
+    padding: 8px;
+}
+
+th{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.ticketShadow:hover
+{
+    box-shadow: 0px 2px 20px 3px rgba(0, 0, 0, 1);
+}
+
+
+tr:hover{
+    background-color: #ffd194;
+    color: white
+}
+
+.modal
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 5px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal.active
+{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.modal-header
+{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+.modal-body
+{
+    font-family: Montserrat;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.modal-footer
+{
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.base-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: Montserrat;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+}
+.base-button:hover
+{
+    box-shadow: 0px 5px 5px 2px rgba(2, 2, 2, 0.555);
+}
+
+.accept-button
+{
+    background-color: #76b852;
+}
+
+.deny-button
+{
+    background-color: #C02425;
+}
+
+
+
+#overlay
+{
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active
+{
+    opacity: 1;
+    pointer-events: all;
+}
+
+#userName
+{
+    font-family: Montserrat;
+    font-size: 50px;
+    color: white;
+    margin-top: 0px;
+}
+
+
+td
+{
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#amount, #submitted, #description, #type, #status
+{
+    margin: 0px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    font-style: italic;
+}
+h4{
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: larger;
+}
+
+#author, #tickeId
+{
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

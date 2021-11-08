@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhantomDigital-Manager</title>
+    <link rel="stylesheet" type="text/css" href="../css/manager-page.css">
+</head>
+<body>
+    <div class="navplacement">
+        <nav>
+            <div class="logo">
+                <h3>Phantom Digital</h3>
+            </div>
+            <ul class="navlinks">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Careers</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a onclick="logout()">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h3 id = "userName" class="userName">Hello, </h3>
+        <div class="innerContainer">
+            <input class="searchBox" type="text" id="myInput" onkeyup="searchFunction()" placeholder="        Search table">
+        </div>
+        <div class = "modal" id = "modal"><!-- turn this into a form to pass data in formParm -->
+            <!-- <p id = "author"></p>
+            <p id = "tickeId"></p> -->
+            <div class="modal-header">
+                <p id = "author"></p>
+                <p id = "tickeId"></p>    
+            </div>
+            <div class="modal-body">
+                <div>
+                    <h4>Submitted</h4>
+                    <p id ="submitted"></p>
+                </div>
+                <div>
+                    <h4>Amount</h4>
+                    <p id = "amount"></p>
+                </div>
+                <div>
+                    <h4>Description</h4>
+                    <p id="description"></p>
+                </div>
+                <div>
+                    <h4>Type</h4>
+                    <p id ="type"></p>
+                </div>
+                <div>
+                    <h4>Status</h4>
+                    <p id ="status"></p>
+                </div>       
+            </div>
+            <div class="accept-deny-buttons">
+                <div class= "modal-footer">
+                    <button title= "Accept Ticket" onclick="acceptTicketButton();" class = "base-button accept-button">Accept</button>
+                    <button title= "Deny Ticket" onclick="denyTicketButton();" class = "base-button deny-button">Deny</button>
+                </div>
+                <!-- <div class= "modal-footer">
+                    <button onclick="denyTicketButton();" class = "base-button deny-button">Deny</button>
+                </div> -->
+            </div>
+        </div>
+        <!-- <div id="overlay"></div> -->
+        <div class="ticketTable">
+            <table class="table table-sortable">
+                <thead>
+                    <tr id = "headerBetter">
+                        <th >Ticket Id</th><!-- works -->
+                        <th >Amount </th> <!-- works -->
+                        <th  >Submitted</th> <!-- funky right now -->
+                        <th>Resolved</th> <!-- not going to work with null...NO over null? -->
+                        <th>Description</th>
+                        <th>Author</th>
+                       <!--  <th>Resolver</th> not going to work with null -->
+                        <th >Status</th> <!-- works -->
+                        <th>Type</th> <!-- works, but is funky... -->
+                    </tr>
+                </thead>
+                    <tbody id="tableData">
+                    </tbody>
+            </table>
+        </div>
+    <div onclick="closeOpenModal();" id="overlay"></div>
+    </div>
+    <script type="text/javascript" src="../javascript/js-manager-page.js"></script>
+</body>
+</html>

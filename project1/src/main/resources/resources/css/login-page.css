@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Roboto&family=Roboto+Slab&display=swap');
+
+:root{
+    /* --primary: hsl(34, 69%, 79%, 0.65);
+    --secondary: hsl(334, 82%, 66%, 0.65); */
+    --primary: hsl(0, 0%, 0%, .75);
+    --secondary: hsl(0, 0%, 26%, .75);
+    /* --primary: hsl(360, 68%, 45%, .65);
+    --secondary: hsl(48, 86%, 57%, .65); */
+    /* --icon-primary: hsl(360, 68%, 45%, .85);
+    --icon-secondary: hsl(48, 86%, 57%, .85); */
+    --icon-primary: hsl(299, 100%, 50%, .95);
+    --icon-secondary: hsl(181, 100%, 44%, .95);
+    
+    /* --button-color: hsl(360, 68%, 45%, .95); */
+    --button-color: hsla(197, 100%, 51%, 0.952);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    background:  linear-gradient(135deg,  var(--primary), var(--secondary)), 
+            /*url('/project1-frontend/background-pictures/vintage-camera.jpg')*/ no-repeat center center / cover;
+    /* background: linear-gradient(45deg, rgb(6, 136, 223) , rgb(112, 14, 14)); */
+    /* linear-gradient(135deg, rgba(12, 83, 190, 0.65) , rgba(175, 49, 38, 0.65)) */
+
+    
+    
+    /* background: repeating-linear-gradient(53deg, rgb(31, 37, 97), rgb(141, 138, 158)); */
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.login-box{
+    background-color: rgba(255, 255, 255, 0.829);
+    padding: 100px, 100px, 50px, 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.555);
+    
+
+}
+
+.user-icon{
+    background: linear-gradient(45deg, var(--icon-primary), var(--icon-secondary));
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -50px;
+    /* box-shadow: 5px 5px 5px #CCC; */
+    box-shadow: 0px 5px 5px 2px rgba(2, 2, 2, 0.555);
+}
+/* need to find a logo!!!!!! */
+#icon{ 
+    font-size: 50px;
+    font-family: Playball;
+    color: white;
+    
+}
+
+
+.form-group{
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+input[type="text"].form-control, input[type="password"].form-control{
+    font-size: 16px;
+    outline: none;
+    /* border: none; */
+    width: calc(100% -36px);
+    border: 2px solid grey;
+    padding: 16px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"].form-control:hover,input[type="password"].form-control:hover{
+    border: 2px solid var(--button-color);
+}
+
+input[type="text"].form-control:focus,input[type="password"].form-control:focus{
+    border: 2px solid hsl(299, 100%, 50%);
+}
+
+input[type="text"].form-control:active,input[type="password"].form-control:active{
+    border: 2px solid hsl(219, 78%, 42%);
+}
+
+
+label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+label input[type="checkbox"]
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+button{
+    outline: none;
+    background-color: var(--button-color);
+    color: white;
+    padding: 16px;
+    display: block;
+    width: 100%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover
+{
+    box-shadow: 5px 5px 5px rgba(2, 2, 2, 0.555);
+}
