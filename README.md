@@ -29,3 +29,4 @@ To-do list:
 
 # Getting Started 
 
+git clone https://github.com/johnjus/ExpenseReimbursementSystem.git
